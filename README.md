@@ -1,1 +1,0 @@
-# mironchapochnikov.github.io

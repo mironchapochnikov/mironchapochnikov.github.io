@@ -3,10 +3,22 @@
 // List of images for the 4x4 grid (Needs at least 16 to look right)
 // Ensure these exist in your Images folder.
 const homeImages = [
-    'back_door_481-250x166.jpg', 'informal-seating_01.jpg', 'tc92_72x78-250x166.jpg', 'asoue24-250x166.jpg',
-    'msv14-250x166.jpg', '092-250x166.jpg', 'svp05-200x250.jpg', 'start_tcd26-200x250.jpg',
-    'portrait_042.jpg', 'crop_lo_DSC1563-copy-250x200.jpg', 'back_door_191-250x166.jpg', '94-250x166.jpg',
-    'start_005-250x201.jpg', '5_e-250x166.jpg', 'tc39_70x87.5-250x166.jpg', 'msv12-250x166.jpg'
+      'barcelona as an ugly city/DSC04709.JPG',
+        'barcelona as an ugly city/DSC04075.JPG',
+        'barcelona as an ugly city/DSC04116.JPG',
+        'barcelona as an ugly city/DSC04128.JPG',
+        'barcelona as an ugly city/DSC04130.JPG',
+        'barcelona as an ugly city/DSC04223.JPG',
+        'barcelona as an ugly city/DSC04250.JPG',
+        'barcelona as an ugly city/DSC04259.JPG',
+        'barcelona as an ugly city/DSC04274.JPG',
+        'barcelona as an ugly city/DSC04277.JPG',
+        'barcelona as an ugly city/DSC04307.JPG',
+        'barcelona as an ugly city/DSC04318.JPG',
+        'barcelona as an ugly city/DSC04325.JPG',
+        'barcelona as an ugly city/DSC04328.JPG',
+        'barcelona as an ugly city/DSC04331.JPG',
+        'barcelona as an ugly city/DSC04341.JPG',
 ];
 
 const homeGrid = document.getElementById('home-grid');
