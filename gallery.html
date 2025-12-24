@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miron Chapochnikov photos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container gallery-mode">
+        
+        <div class="sidebar">
+            <div class="logo-area">
+                <h2>MIRON CHAPOCHNIKOV</h2>
+            </div>
+             <ul class="nav">
+
+                 <li>
+                     <a href="#" class="active" onclick="loadCategory('barcelona as an ugly city', this)"> barcelona as an ugly city</a>
+                 </li>
+
+                <li>
+                    <a href="#" onclick="loadCategory('celebrations', this)">football celebrations</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadCategory('portraits & people', this)">portraits & people</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadCategory('city life & travels')">city life & travels</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadCategory('tuschinski glam')">tuschinski glam</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadCategory('brutalist dream')">brutalist dream</a>
+                </li>
+                 <li>
+                    <a href="#" onclick="loadCategory('one bike ride')">one bike ride</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadCategory('kt s iberian words of wisdom')">kt s iberian words of wisdom</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadCategory('club shy')">club shy</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadCategory('generation communication')">generation communication</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadCategory('poems')">poems</a>
+                </li>
+                
+                 <li>
+                    <a href="#" onclick="loadCategory('exhibition: soul of the camera')">exhibition: soul of the camera</a>
+                </li>
+                <li><a href="#">biography</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+    <div class="main-stage">
+        <img id="current-image" src="" alt="Main Display">
+        <div id="image-counter"></div>
+    </div> <div class="bottom-bar">
+        <div id="thumbnail-strip" class="thumbnail-strip"></div>
+    </div>
+
+</div>
+
+    <script src="gallery.js"></script>
+
+</body>
+</html>

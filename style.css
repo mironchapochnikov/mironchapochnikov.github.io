@@ -1,0 +1,216 @@
+/* RESET */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #555;
+    font-size: 12px;
+    /* Only prevent scrolling on gallery mode to handle bottom bar */
+    overflow: auto; 
+}
+
+body.gallery-mode-active {
+     overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+/* Ensure gallery container is fixed height for bottom bar positioning */
+.main-container.gallery-mode {
+    height: 100vh;
+}
+
+
+/* --- SHARED SIDEBAR --- */
+.sidebar {
+    width: 280px;
+    padding: 30px 30px;
+    background: #f4f4f4;
+    border-right: none;
+    height: 100vh; /* Fixed height */
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+.logo { width: 100%; max-width: 180px; margin-bottom: 10px; border: none; }
+.logo-area h2 { font-size: 18px; margin-bottom: 30px; color: #6c6c6c; font-weight: normal; }
+.nav { list-style: none; }  
+.nav li { margin-bottom: 8px; }
+/* style.css - Update these lines in the sidebar section */
+.nav a { 
+    text-decoration: none; 
+    color: #6c6c6c; /* Default: Gray */
+    transition: color 0.2s; 
+}
+
+.nav a:hover { 
+    color: #0b0b0b; /* Hover: Black */
+}
+
+.nav a.active { 
+    color: #0b0b0b; /* Active: Blue */
+    font-weight: normal; /* Keeps the bold text for the current item */
+}
+/* --- SHARED CONTENT AREA --- */
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* style.css - Add to Sidebar Section */
+
+/* ========= HOMEPAGE SPECIFIC STYLES ========= */
+
+.homepage-body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-y: auto; /* Allow scrolling */
+}
+
+.home-wrapper {
+    width: 100%;
+    max-width: 1000px; /* Limits width so it doesn't stretch too wide */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything horizontally */
+}
+
+.home-header {
+    text-align: center;
+    margin-bottom: 50px; /* Space between name and grid */
+}
+
+.home-logo {
+    width: 200px; /* Slightly larger logo for home */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.home-header h1 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+/* Update grid to look good centered */
+.home-grid-4x4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Columns */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Responsive: 2 columns on tablets, 1 on mobile */
+@media (max-width: 768px) {
+    .home-grid-4x4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+#copyright { margin-top: 40px; text-align: right; color: #ccc; font-size: 11px; }
+
+
+/* ========= GALLERY PAGE SPECIFIC STYLES ========= */
+.gallery-mode .content {
+     height: 100%;
+}
+
+/* 1. THE CONTENT CONTAINER */
+/* This acts as a vertical column: Stage on top, Bar on bottom */
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    height: 100vh; /* Take full screen height */
+    overflow: hidden; /* No scrolling on the main container */
+    /* NEW: Add padding at bottom so links don't get hidden behind the bar */
+    padding-bottom: 100px; 
+    
+    /* NEW: Lower Z-Index so the bar sits on top of it */
+    z-index: 10;
+}
+
+/* 2. CENTRAL IMAGE STAGE */
+/* Takes up all available space ABOVE the bottom bar */
+.main-stage {
+    flex-grow: 1; /* Grow to fill space */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #f4f4f4;
+    overflow: hidden; /* Ensure image doesn't spill out */
+    position: relative;
+    /* NEW: Ensure the main stage stops before the bar */
+    padding-bottom: 20px;
+}
+
+#current-image {
+    max-width: 100%;
+    max-height: 100%; /* Fit perfectly inside the stage */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* ESSENTIAL: Scales image to show everything */
+    display: block;
+}
+
+/* 3. BOTTOM BAR */
+/* Fixed height at the bottom, not absolute positioned anymore */
+.bottom-bar {
+
+    /* NEW: Fix it to the screen, not the content div */
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100vw; /* 100% of Viewport Width */
+    height: 70px;
+    background: #e1e1e1;
+    display: flex;
+    align-items: center;
+    overflow-x: auto; /* Allow horizontal scrolling for thumbnails */
+    padding: 0 10px;
+    white-space: nowrap;
+    z-index: 100;
+    
+    /* 2. HIDE SCROLLBAR (Firefox) */
+    scrollbar-width: none; 
+    
+    /* 3. HIDE SCROLLBAR (IE and Edge) */
+    -ms-overflow-style: none; 
+}
+
+/* style.css */
+
+/* Add this to your gallery section */
+#image-counter {
+    position: absolute;
+    bottom: 15px; /* Adjusts vertical distance from bottom edge */
+    right: 30px;  /* Adjusts horizontal distance from right edge */
+    font-size: 11px;
+    color: #555;
+    pointer-events: none; /* Prevents it from blocking clicks */
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+
+
+
+.thumbnail-strip { display: flex; gap: 10px; }
+
+.thumb-item {
+    height: 50px; width: auto;
+    cursor: pointer; opacity: 0.7;
+    transition: opacity 0.2s, border 0.2s;
+}
+.thumb-item:hover { opacity: 1; filter: grayscale(0%); }
+.thumb-item.active { opacity: 1; }
