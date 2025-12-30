@@ -3,8 +3,8 @@
 
 body {
     font-family: "Helvetica Neue", Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #555;
+    background-color: #f1f1f1e6;
+    color: #f1f1f1e6;
     font-size: 12px;
     /* Only prevent scrolling on gallery mode to handle bottom bar */
     overflow: auto; 
@@ -28,7 +28,7 @@ body.gallery-mode-active {
 .sidebar {
     width: 280px;
     padding: 30px 30px;
-    background: #f4f4f4;
+    background: #f1f1f1e6;
     border-right: none;
     height: 100vh; /* Fixed height */
     position: sticky;
@@ -38,22 +38,22 @@ body.gallery-mode-active {
 }
 
 .logo { width: 100%; max-width: 180px; margin-bottom: 10px; border: none; }
-.logo-area h2 { font-size: 18px; margin-bottom: 30px; color: #6c6c6c; font-weight: normal; }
+.logo-area h2 { font-size: 18px; margin-bottom: 30px; color: #dc9090e6; font-weight: normal; }
 .nav { list-style: none; }  
 .nav li { margin-bottom: 8px; }
 /* style.css - Update these lines in the sidebar section */
 .nav a { 
     text-decoration: none; 
-    color: #6c6c6c; /* Default: Gray */
+    color: #555555; /* Default: Gray */
     transition: color 0.2s; 
 }
 
 .nav a:hover { 
-    color: #0b0b0b; /* Hover: Black */
+    color: #929292e6; /* Hover: Black */
 }
 
 .nav a.active { 
-    color: #0b0b0b; /* Active: Blue */
+    color: #dc9090e6; /* Active: Blue */
     font-weight: normal; /* Keeps the bold text for the current item */
 }
 /* --- SHARED CONTENT AREA --- */
@@ -65,61 +65,89 @@ body.gallery-mode-active {
 }
 
 /* style.css - Add to Sidebar Section */
-
-/* ========= HOMEPAGE SPECIFIC STYLES ========= */
+/* ========= HOMEPAGE REVISED STYLES ========= */
 
 .homepage-body {
+    /* Use Flexbox to center the main image */
     display: flex;
     justify-content: center;
-    min-height: 100vh;
-    overflow-y: auto; /* Allow scrolling */
-    /* ADD THIS LINE FOR BACKGROUND COLOR */
-    background-color: #a9a9a9;  /* Example: White */
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Prevent scrolling on home */
+    background-color: #f1f1f1e6;
+    position: relative; /* Establish context for absolute positioning */
 }
 
-.home-wrapper {
-    width: 100%;
-    max-width: 1000px; /* Limits width so it doesn't stretch too wide */
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers everything horizontally */
-}
-
-.home-header {
-  
-    text-align: center;
-    margin-bottom: 0; /* Zero margin here */
-    padding-left: 0;
-}
-
-
-.home-logo {
-    width: 200px; /* Slightly larger logo for home */
-    height: auto;
-    margin-bottom: 15px;
+/* 1. Top Header */
+.home-anchor-top-left {
+    /* Position: In flow (not absolute) to sit above grid */
+    position: relative; 
     
+    /* Match the Grid's dimensions exactly */
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto 0 auto; /* Centered horizontally */
+    
+    z-index: 10;
 }
 
-.home-header h1 {
-    font-size: 32px;
+.home-anchor-top-left h1 {
+    font-size: 18px; 
     font-weight: normal;
-    letter-spacing: 0px;
-    color: #f4f4f4;
-    margin: 0; /* CRITICAL: This removes the hidden browser spacing */
-    line-height: 1; /* Ensures the text height is tight */
+    color: #6c6c6c; 
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+    
+    /* ALIGNMENT LOGIC: Pushes text to far left and far right */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-/* Update grid to look good centered */
-.home-grid-4x4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 Columns */
-    gap: 20px;
-    width: 100%;
-    /* SPACING: Exactly 20px from the text above */
-    margin-top: 10px; 
-    margin-bottom: 10px;
+/* 2. Bottom Footer */
+.home-anchor-bottom-right {
+    /* Position: In flow (not absolute) to sit below grid */
+    position: relative;
     
+    /* Match the Grid's dimensions exactly */
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px auto 40px auto; /* Centered horizontally */
+    
+    /* Align text to the right */
+    text-align: right;
+    
+    font-size: 11px;
+    color: #555555;
+    z-index: 10;
+    pointer-events: none; 
+}
+
+/* 3. Center Image */
+.home-center-stage {
+    z-index: 1;
+    /* Optional: Limit width to ensure it doesn't touch edges */
+    max-width: 80%;
+    max-height: 80%;
+    display: flex;
+}
+
+.home-hero-image {
+    max-height: 80vh; /* Keeps image from getting too tall */
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* RESPONSIVE: On very small screens, adjust padding so text doesn't overlap image */
+@media (max-width: 600px) {
+    .home-hero-image {
+        max-height: 60vh;
+    }
 }
 
 /* ========= GALLERY PAGE SPECIFIC STYLES ========= */
@@ -151,7 +179,7 @@ body.gallery-mode-active {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    background-color: #f4f4f4;
+    background-color: #f1f1f1e6;
     overflow: hidden; /* Ensure image doesn't spill out */
     position: relative;
     /* NEW: Ensure the main stage stops before the bar */
@@ -200,7 +228,7 @@ body.gallery-mode-active {
     bottom: 15px; /* Adjusts vertical distance from bottom edge */
     right: 30px;  /* Adjusts horizontal distance from right edge */
     font-size: 11px;
-    color: #555;
+    color: #555555;
     pointer-events: none; /* Prevents it from blocking clicks */
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
@@ -218,39 +246,109 @@ body.gallery-mode-active {
 .thumb-item:hover { opacity: 1; filter: grayscale(0%); }
 .thumb-item.active { opacity: 1; }
 
+/* Update the homepage body to allow scrolling if the grid is tall */
+.homepage-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Changed from height to min-height */
+    width: 100vw;
+    overflow-y: auto; /* Allow scrolling for the grid */
+    background-color: #e1e1e1;
+    position: relative;
+}
 
-/* 3. The Grid Container */
+/* Updated Grid Container */
 .home-grid-4x4 {
     display: grid;
-    /* Always 4 columns */
     grid-template-columns: repeat(4, 1fr); 
-    
-    /* "Thinner" gap: Very tight spacing between images */
-    gap: 5px; 
-    
-    /* Grid Centering */
-    width: 95%  ; 
+    gap: 4px; /* Increased gap slightly for aesthetics */
+    width: 90%; 
     max-width: 800px; 
-    margin: 40px auto; 
+    margin: 40px auto; /* Margin top/bottom to clear the name/copyright */
+    z-index: 2; /* Ensure it sits above background elements */
 }
 
-/* 4. The Individual Links (Grid Items) */
 .home-grid-item {
     display: block;
-    /* Sharp corners (not rounded) */
-    border-radius: 0; 
+    border-radius: 0;
+    overflow: hidden;
 }
 
-/* 5. The Images themselves */
 .home-grid-item img {
     width: 100%;
     height: 100%;
-    
-    /* "Thinner" Images: This makes them tall rectangles (Portrait) instead of squares. */
-    /* You can try '3 / 4' or '9 / 16' if you want them even thinner. */
-    aspect-ratio: 16 / 9; 
-    
+    aspect-ratio: 3 / 2; /* Standard photo aspect ratio */
     object-fit: cover; 
     display: block;
-    transition: transform 0.3s ease;
 }
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .home-grid-4x4 {
+        grid-template-columns: repeat(2, 1fr); /* 2x6 on mobile */
+    }
+}
+
+/* --- LIGHTBOX STYLES --- */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 8001; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    
+    /* Flexbox to center the image perfectly */
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out; /* Indicates clicking will close it */
+}
+
+/* Lightbox Image */
+.lightbox-content {
+    max-width: 95%;
+    max-height: 95vh;
+    box-shadow: 0 0 0 100vmax black;
+    cursor: default; /* prevents zoom-out cursor on the image itself */
+   
+}
+
+@keyframes zoom {
+    from {transform:scale(0.9); opacity: 0;} 
+    to {transform:scale(1); opacity: 1;}
+}
+
+
+
+#fullscreen-btn {
+  /* Positioning: Top Right, Fixed so it doesn't scroll away */
+  position: fixed;
+  top: 20px;
+  right: 22px;
+  z-index: 7999; /* Ensures it sits on top of everything else */
+
+  /* Visual Style: Transparent "text only" look */
+  background-color: transparent;
+  border: none;
+  padding: 8px; /* Gives it a slightly larger clickable area */
+  cursor: pointer;
+
+  /* Font Styling */
+  /* IMPORTANT: Change this color if your website background is dark */
+  color: #555555; 
+  font-size: 12px;
+ font-family: "Helvetica Neue", Arial, sans-serif;
+  /* A subtle interaction effect */
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+/* Makes text fully opaque and grow slightly when hovering */
+#fullscreen-btn:hover {
+  opacity: 1;
+   color: #dc9090e6; 
+}
+

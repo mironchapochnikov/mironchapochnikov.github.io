@@ -118,15 +118,15 @@ const galleryImages = {
         'how to beach/DSC03374.jpg',
         'how to beach/DSC05350-2.jpg',
         'how to beach/DSC05359-2.jpg',
-        'final2Artboard 1@4x.png',
-        'final2Artboard 2@4x.png',
-        'final2Artboard 3@4x.png',
-        'final2Artboard 4@4x.png',
-        'final2Artboard 5@4x.png',
-        'final2Artboard 6@4x.png',
-        'final2Artboard 7@4x.png',
-        'final2Artboard 8@4x.png',
-        'final2Artboard 9@4x.png',
+        'how to beach/final2Artboard 1@4x.png',
+        'how to beach/final2Artboard 2@4x.png',
+        'how to beach/final2Artboard 3@4x.png',
+        'how to beach/final2Artboard 4@4x.png',
+        'how to beach/final2Artboard 5@4x.png',
+        'how to beach/final2Artboard 6@4x.png',
+        'how to beach/final2Artboard 7@4x.png',
+        'how to beach/final2Artboard 8@4x.png',
+        'how to beach/final2Artboard 9@4x.png',
     ],
 
       'portraits': [
@@ -205,7 +205,6 @@ const galleryImages = {
         'brutalist dream/7-2.jpg',
         'brutalist dream/DSC08556-2-2.jpg',
         'brutalist dream/DSC08600-2-2.jpg',
-        'brutalist dream/DSC08600-2.jpg',
         'brutalist dream/DSC08614-2.jpg',
         'brutalist dream/DSC08618-2.jpg',
         'brutalist dream/DSC08625-2.jpg',
@@ -315,66 +314,93 @@ const galleryImages = {
         'generation communication/9.png',
         'generation communication/10.png',
     ],
-    'kt s iberian words of wisdom': [
-        'final2Artboard 1@4x.PNG',
-        'final2Artboard 2@4x.PNG',
-        'KTArtboard 1.PNG',
-        'KTArtboard 2.PNG',
-        'KTArtboard 3.PNG',
-        'KTArtboard 4.PNG',
-        'KTArtboard 5.PNG',
-        'KTArtboard 6.PNG',
-        'KTArtboard 7.PNG',
-        'KTArtboard 8.PNG',
-        'KTArtboard 9.PNG',
-        'KTArtboard 10.PNG',
-        'KTArtboard 11.PNG',
-        'KTArtboard 12.PNG',
-        'KTArtboard 13.PNG',
-        'KTArtboard 14.PNG',
-        'KTArtboard 15.PNG',
-        'KTArtboard 16.PNG',
-        'KTArtboard 17.PNG',
-        'KTArtboard 18.PNG',
-        'KTArtboard 19.PNG',
-        'KTArtboard 20.PNG',
-        'KTArtboard 22.PNG',
-        'KTArtboard 23.PNG',
-        'KTArtboard 24.PNG',
-        'KTArtboard 25.PNG',
-        'KTArtboard 26.PNG',
-        'KTArtboard 27.PNG',
-        'KTArtboard 28.PNG',
-        'KTArtboard 29.PNG',
-        'KTArtboard 31.PNG',
-        'KTArtboard 32.PNG',
-        'KTArtboard 33.PNG',
-        'KTArtboard 34.PNG',
-        'KTArtboard 35.PNG',
-        'KTArtboard 36.PNG',
+    'kt s Iberian words of Wisdom': [
+        'kt s Iberian words of Wisdom/final2Artboard 1@4x.PNG',
+        'kt s Iberian words of Wisdom/final2Artboard 2@4x.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 1.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 2.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 3.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 4.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 5.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 6.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 7.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 8.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 9.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 10.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 11.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 12.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 13.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 14.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 15.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 16.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 17.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 18.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 19.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 20.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 23.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 24.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 25.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 26.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 27.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 28.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 29.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 22.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 34.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 35.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 36.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 31.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 32.PNG',
+        'kt s Iberian words of Wisdom/KTArtboard 33.PNG',
     ],
     
     
 };
+// ... (Your galleryImages object stays above this line) ...
 
-// GLOBAL VARIABLES
+// --- GLOBAL VARIABLES ---
 let currentCategoryList = []; 
 let currentIndex = 0; 
 const mainImage = document.getElementById('current-image');
 const thumbStrip = document.getElementById('thumbnail-strip');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const btn = document.getElementById('fullscreen-btn');
 
-// FUNCTION: LOAD A SPECIFIC CATEGORY
-function loadCategory(categoryName, clickedElement) {
-    currentCategoryList = galleryImages[categoryName] || galleryImages['default'];
+// --- FUNCTION: LOAD A SPECIFIC CATEGORY ---
+function loadCategory(categoryName, clickedElement = null, updateUrl = true) {
+    // 1. Safety Check: Does this category exist?
+    if (!galleryImages[categoryName]) {
+        console.error("Category not found:", categoryName);
+        return;
+    }
+
+    currentCategoryList = galleryImages[categoryName];
     
-    // Sidebar active state logic
+    // 2. Sidebar Active State Logic
+    // If we have a clicked element, use it.
     if (clickedElement) {
         document.querySelectorAll('.nav a').forEach(link => link.classList.remove('active'));
         clickedElement.classList.add('active');
+    } 
+    // If no clicked element (loaded from URL), find the link manually and highlight it
+    else {
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.classList.remove('active');
+            // Check if the link's onclick matches the category name
+            if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(`'${categoryName}'`)) {
+                link.classList.add('active');
+            }
+        });
     }
 
+    // 3. Update Browser URL (Optional but helpful)
+    if (updateUrl) {
+        const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?category=' + encodeURIComponent(categoryName);
+        window.history.pushState({ path: newUrl }, '', newUrl);
+    }
+
+    // 4. Update Thumbnails
     thumbStrip.innerHTML = '';
-    
     currentCategoryList.forEach((filename, index) => {
         const thumb = document.createElement('img');
         thumb.src = `Images/${filename}`; 
@@ -383,16 +409,17 @@ function loadCategory(categoryName, clickedElement) {
         thumbStrip.appendChild(thumb);
     });
     
+    // 5. Update Main Image
     if(currentCategoryList.length > 0) {
         updateMainImageSource(0);
     } else {
-        mainImage.src = ""; // Clear image if category is empty
+        mainImage.src = ""; 
         const counter = document.getElementById('image-counter');
         if (counter) counter.textContent = "";
     }
 }
 
-// FADE TRANSITION LOGIC
+// --- FADE TRANSITION LOGIC ---
 function transitionToImage(index) {
     mainImage.classList.add('fade-out'); 
     setTimeout(() => {
@@ -401,27 +428,31 @@ function transitionToImage(index) {
     }, 200); 
 }
 
-// CORE IMAGE UPDATE
+// --- CORE IMAGE UPDATE ---
 function updateMainImageSource(index) {
     currentIndex = index;
     mainImage.src = `Images/${currentCategoryList[index]}`;
     
-    // --- COUNTER LOGIC (With Safety Check) ---
+    // Counter Logic
     const imageCounter = document.getElementById('image-counter');
     if (imageCounter && currentCategoryList.length > 0) {
         imageCounter.textContent = `${index + 1}/${currentCategoryList.length}`;
     }
-    // -----------------------------------------
 
+    // Lightbox Sync
+    if (lightbox.style.display === "flex") {
+        lightboxImg.src = mainImage.src;
+    }
+
+    // Thumbnail Active State
     const allThumbs = document.querySelectorAll('.thumb-item');
     allThumbs.forEach(t => t.classList.remove('active'));
-    
     if(allThumbs[index]) {
         allThumbs[index].classList.add('active');
     }
 }
 
-// KEYBOARD NAVIGATION
+// --- KEYBOARD NAVIGATION ---
 function showNext() {
     if (currentCategoryList.length === 0) return;
     let nextIndex = currentIndex + 1;
@@ -441,8 +472,50 @@ document.addEventListener('keydown', (e) => {
     if (e.key === "ArrowLeft") showPrev();
 });
 
-// INITIALIZE
-// Pass 'null' because no button was clicked on initial load
-loadCategory('barcelona as an ugly city', null);
+// --- LIGHTBOX SPECIFIC LOGIC ---
+mainImage.addEventListener('click', () => {
+    if (currentCategoryList.length > 0) {
+        lightbox.style.display = "flex"; 
+        lightboxImg.src = mainImage.src; 
+    }
+});
+
+function closeLightbox() {
+    lightbox.style.display = "none";
+}
+
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch((err) => {
+      console.log(`Error attempting to enable fullscreen: ${err.message}`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+}
+
+if(btn) btn.addEventListener('click', toggleFullscreen);
 
 
+// --- INITIALIZATION LOGIC (The Important Part) ---
+
+// 1. Enable Gallery Mode Styling
+document.body.classList.add('gallery-mode-active');
+
+// 2. Handle Browser Back/Forward Buttons
+window.addEventListener('popstate', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const cat = urlParams.get('category') || 'barcelona as an ugly city';
+    // Load category but DO NOT push to history again (false)
+    loadCategory(cat, null, false);
+});
+
+// 3. Initial Load
+const urlParams = new URLSearchParams(window.location.search);
+const requestedCategory = urlParams.get('category');
+
+if (requestedCategory && galleryImages[requestedCategory]) {
+    loadCategory(requestedCategory, null, false); // Load requested category
+} else {
+    loadCategory('barcelona as an ugly city', null, false); // Default fallback
+}
