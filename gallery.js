@@ -403,7 +403,7 @@ function loadCategory(categoryName, clickedElement = null, updateUrl = true) {
     thumbStrip.innerHTML = '';
     currentCategoryList.forEach((filename, index) => {
         const thumb = document.createElement('img');
-        thumb.src = `Images/${filename}`; 
+        thumb.src = `images/${filename}`; 
         thumb.classList.add('thumb-item');
         thumb.addEventListener('click', () => transitionToImage(index));
         thumbStrip.appendChild(thumb);
@@ -431,7 +431,7 @@ function transitionToImage(index) {
 // --- CORE IMAGE UPDATE ---
 function updateMainImageSource(index) {
     currentIndex = index;
-    mainImage.src = `Images/${currentCategoryList[index]}`;
+    mainImage.src = `images/${currentCategoryList[index]}`;
     
     // Counter Logic
     const imageCounter = document.getElementById('image-counter');
